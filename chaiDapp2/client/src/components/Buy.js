@@ -34,8 +34,8 @@ const Buy = ({ state }) => {
   };
   const [s3, setS3] = useState(new awsS3({
     apiVersion: "2006-03-01",
-    accessKeyId: "3E6A65353D6376F33E60", //FILEBASE_ACCESS_ID
-    secretAccessKey: "EiqdZsUsQHukycQuTo79dayYOXYyET9hrH4e9ekL", //FILEBASE_SECRET_KEY
+    accessKeyId: "FILEBASE_ACCESS_ID", //FILEBASE_ACCESS_ID
+    secretAccessKey: "FILEBASE_SECRET_KEY", //FILEBASE_SECRET_KEY
     endpoint: "https://s3.filebase.com/",
     region: "us-east-1",
     s3ForcePathStyle: true,
@@ -90,7 +90,7 @@ const Buy = ({ state }) => {
           method: 'POST',
           headers: {
             'content-type': 'application/json',
-            "X-RapidAPI-Key": "1a9b0fb267msh6baa89733baea49p1b7dbfjsnab05e6fa9631", //RAPID_API_KEY
+            "X-RapidAPI-Key": "RAPID_API_KEY", //RAPID_API_KEY
             "X-RapidAPI-Host": "chatgpt-api7.p.rapidapi.com",
           },
           body: `{"query": "Pretend you are TechnoClever. Your hobbies are singing, writing poets. You are good in Classical singing and developing dApps. You are expert in dAPP development. beginner in filebase development. ${addAsk}"}`,
@@ -148,10 +148,10 @@ const Buy = ({ state }) => {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
-          "X-RapidAPI-Key": "1a9b0fb267msh6baa89733baea49p1b7dbfjsnab05e6fa9631", //RAPID_API_KEY
+          "X-RapidAPI-Key": "RAPID_API_KEY", //RAPID_API_KEY
           "X-RapidAPI-Host": "chatgpt-api7.p.rapidapi.com",
         },
-        body: `{"query": "Pretend to be Ask Queries Earn Crypto Bot. ${addAsk}"}`,
+        body: `{"query": "${addAsk}"}`,
       };
 
 
@@ -244,7 +244,7 @@ const Buy = ({ state }) => {
                 );
               })
             ) : (
-              <p style={{ margin: "0 auto" }}>Ask Queries Earn Crypto🙂</p>
+              <p style={{ margin: "0 auto" }}>Save via Crypto🙂</p>
             )}
             <div ref={messageEnd} />
           </div>
